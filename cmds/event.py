@@ -19,10 +19,10 @@ class Event(Cog_Extension):
 
     @commands.Cog.listener()
     async def on_message(self, msg):
-        keyword = ['kun', 'Kun', '張彥坤', '彥坤', '坤']
+        keyword = ['kun', 'Kun', '張彥坤', '彥坤', '坤']  #輸入對應字元來產生回應
         if msg.content in keyword and msg.author != self.bot.user:
             await msg.channel.send('好帥')
-        elif msg.content.endswith('林亮儀') and msg.author != self.bot.user:
+        elif msg.content.endswith('林亮儀') and msg.author != self.bot.user:  #結尾為特定字元時產生回應
             await msg.channel.send('超笨')
 
 def setup(bot):

@@ -6,9 +6,8 @@ import os
 with open('settings.json', 'r', encoding='utf8') as jfile:
     jdata = json.load(jfile)
 
-intents = discord.Intents.default()
+intents = discord.Intents.all()
 
-intents.members = True
 bot = commands.Bot(command_prefix='[',intents = intents)
 
 @bot.event
